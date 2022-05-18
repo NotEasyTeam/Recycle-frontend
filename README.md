@@ -23,9 +23,9 @@
 
 ## <a href="https://github.com/NotEasyTeam/Recycle-frontend/wiki">Github Wiki</a>
 
-## 🔨 개발 목업
+## 🔨 <a href="https://github.com/NotEasyTeam/Recycle-frontend/wiki">개발 목업</a>
 
-## 📕 API 문서
+## 📕 <a href="https://github.com/NotEasyTeam/Recycle-frontend/wiki">API </a>
 
 ## 📘 DB 설계
 
