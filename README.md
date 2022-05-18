@@ -27,5 +27,6 @@
 
 ## 📕 <a href="https://docs.google.com/spreadsheets/d/1u2awAMkEIl7eGeQn5O7iANxGBe3wZ578TkSjS4y5MwY/edit?usp=sharing">API 및 DB 설계</a>
 
-## 📢 <a href="https://github.com/NotEasyTeam/Recycle-frontend/wiki">발표 </a>
+## 📢 <a href="https://github.com/NotEasyTeam/Recycle-frontend/wiki">발표 영상</a>
+
 
