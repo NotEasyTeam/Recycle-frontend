@@ -21,6 +21,8 @@
     <img src="https://img.shields.io/badge/mongoDB-47A248?style=for-the-badge&logo=MongoDB&logoColor=white">
 </div>
 
+<h1><a href=“https://github.com/NotEasyTeam/Recycle-frontend/wiki”>Github Wiki</a></h1>
+
 ## 🔨 개발 목업
 
 ## 📕 API 문서
