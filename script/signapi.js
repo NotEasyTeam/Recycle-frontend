@@ -47,3 +47,8 @@ async function handleLogin(){
     }
 }
 
+function logout(){
+    localStorage.removeItem("token")
+    window.location.replace(`${frontend_base_url}/login.html`);
+}
+
