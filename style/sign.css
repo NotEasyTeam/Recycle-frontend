@@ -4,7 +4,6 @@ body {
     align-items: center; 
     width: 100%; 
     height: 980px; 
-    animation: showText 2s; 
     background-image: linear-gradient(to right bottom, #7df9e9, #7df6e0, #7ef3d6, #7fefcc, #82ecc2, #78edb7, #71edab, #6ced9d, #5cf187, #51f46c, #4cf64b, #4ef804);
     overflow: hidden;
 }
@@ -16,7 +15,12 @@ body {
     width: 100%; 
     height: 980px; 
     animation: showText 2s; 
+    /* animation: movebg 5s linear infinite; */
     background-image: linear-gradient(to left top, #7df9e9, #7df6e0, #7ef3d6, #7fefcc, #82ecc2, #78edb7, #71edab, #6ced9d, #5cf187, #51f46c, #4cf64b, #4ef804);
+    /* background-color: #5cf187;
+    background-position: xy;
+    background-size: 100%;
+    background-repeat: repeat-x; */
 }
 
 .signup-container {
@@ -102,7 +106,7 @@ body {
 
 @keyframes showText {
     from {
-        transform: translate(20px 20px);
+        transform: translate(0px);
         opacity: 0;
     }
 
@@ -112,3 +116,8 @@ body {
     }
 }
 
+/* 배경 움직이게하는 애니메이션 */
+@keyframes movebg {
+    0% { background-position: 0 center;}
+    100% { background-position: -2000px center;}
+}
