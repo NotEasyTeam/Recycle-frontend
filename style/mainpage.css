@@ -5,7 +5,6 @@ body {
     width: 100%;
     height: 980px;
     animation: showText 2s;
-    background-image: linear-gradient(to right bottom, #7df9e9, #7df6e0, #7ef3d6, #7fefcc, #82ecc2, #78edb7, #71edab, #6ced9d, #5cf187, #51f46c, #4cf64b, #4ef804);
     overflow: hidden;
 }
 
@@ -51,6 +50,7 @@ body {
 }
 
 .main-body {
+    background-color: rgb(210, 210, 210);
     display: inline-block;
     flex-direction: column;
     width: 100%;
@@ -89,7 +89,7 @@ body {
 
 .load-image:hover {
     cursor: pointer;
-    background-color: rgb(190,190,190);
+    background-color: rgb(130,130,130);
     transform: scale(1.1);
     transition: all 0.2s ease-in-out;
 }
@@ -135,17 +135,17 @@ body {
     height: 10%;
     margin-top: 15px;
     text-align: center;
-    color: white;
+    color: rgb(130,130,130);
 }
 
 a:link {
-    color: white;
+    color: rgb(100,130,130);
 }
 
 a:visited {
-    color: white;
+    color: rgb(100,130,130);
 }
 
 a:hover {
-    color: green;
+    color: rgb(0,0,0);
 }
