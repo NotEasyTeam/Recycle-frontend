@@ -26,12 +26,17 @@
         <h2>🌿10CYCLE</h2>
     </div>
 
-    <!-- 로그아웃 -->
-    <div class="logout-div">
-
-        <button class="logout" onclick="handleSignup()">
+    <!-- 회원 정보 (로그아웃, 포인트) -->
+    <div class="user-info">
+        <p class="logout" onclick="handleLogout()">
             <i class="fa-solid fa-right-from-bracket" id="logout-icon"></i> 로그아웃
-        </button>
+        </p>
+        <p class="point">
+            <i class="fa-solid fa-coins"></i> 30,300 포인트
+        </p>
+        <p class="username">
+            <i class="fa-solid fa-user"></i> ㅇㅇㅇ 님
+        </p>
     </div>
 </header>
 
@@ -39,14 +44,35 @@
 <div class="main-body">
     <!-- 사진 가져오는 버튼 부분 -->
     <div class="load-image-div">
+        <img class="garbage" src="/static/image/Garbage.png"
+                         alt="Garbage">
         <button class="load-image" onclick="handleSignup()">
             <i class="fa-solid fa-arrow-up-from-bracket"></i> 사진 가져오기
         </button>
     </div>
 
     <!-- 쓰레기통 4개 버튼 부분 -->
-    <div>
-
+    <div class="bins">
+        <!-- Paper 쓰레기통 버튼 -->
+        <button class="paper">
+            <img class="paper-bin" src="/static/image/Bin_Paper.png"
+                         alt="Paper">
+        </button>
+        <!-- Metal 쓰레기통 버튼 -->
+        <button class="metal">
+            <img class="metal-bin" src="/static/image/Bin_Metal.png"
+                         alt="Paper">
+        </button>
+        <!-- Plastic 쓰레기통 버튼 -->
+        <button class="plastic">
+            <img class="plastic-bin" src="/static/image/Bin_Plastic.png"
+                         alt="Paper">
+        </button>
+        <!-- Glass 쓰레기통 버튼 -->
+        <button class="glass">
+            <img class="glass-bin" src="/static/image/Bin_Glass.png"
+                         alt="Paper">
+        </button>
     </div>
 </div>
 
