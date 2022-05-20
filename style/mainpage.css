@@ -68,9 +68,9 @@ body {
 
 .load-image-div .garbage {
     position: absolute;
-    top: -17%;
+    top: -9.0%;
     left: 36%;
-    transform: scale(0.78);
+    transform: scale(0.62);
     padding-top: 5%;
 }
 
@@ -85,13 +85,13 @@ body {
     height: 12%;
     border-radius: 10px;
     background-color: white;
-    transform: scale(0.9);
+    transform: scale(0.75);
 }
 
 .load-image:hover {
     cursor: pointer;
     background-color: rgb(190,190,190);
-    transform: scale(1);
+    transform: scale(0.8);
     transition: all 0.2s ease-in-out;
 }
 
@@ -102,32 +102,32 @@ body {
 .paper, .metal, .plastic, .glass {
     background-color: transparent;
     border-color: transparent;
-    padding-top: 1.5%;
+    
 }
 
 .paper-bin, .metal-bin, .plastic-bin, .glass-bin {
     width: 80%;
     height: 80%;
-    transform: scale(0.8);
+    transform: scale(0.7);
 }
 
 .paper-bin:hover {
-    transform: scale(0.9);
+    transform: scale(0.75);
     transition: all 0.5s ease-in-out;
 }
 
 .metal-bin:hover {
-    transform: scale(0.9);
+    transform: scale(0.75);
     transition: all 0.5s ease-in-out;
 }
 
 .plastic-bin:hover {
-    transform: scale(0.9);
+    transform: scale(0.75);
     transition: all 0.5s ease-in-out;
 }
 
 .glass-bin:hover {
-    transform: scale(0.9);
+    transform: scale(0.75);
     transition: all 0.5s ease-in-out;
 }
 
