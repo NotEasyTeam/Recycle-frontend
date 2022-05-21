@@ -96,21 +96,23 @@ body {
     font-size: 20px;
 }
 
-.load-image {
+.result .load-image {
     margin-top: 20%;
     font-size: 20px;
     font-weight: bold;
-    height: 10%;
+    width: 60%;
+    height: 30%;
     border-radius: 10px;
-    background-color: white;
-    transform: scale(1);
+    border: 2px black solid;
+    background-image: linear-gradient(to right bottom, #95b4bb, #b2c5cf, #ced7e0, #e8eaf0);
+    transform: scale(0.9);
 }
 
 .load-image:hover {
     cursor: pointer;
-    background-color: rgb(190,190,190);
-    transform: scale(1.1);
-    transition: all 0.2s ease-in-out;
+    background-image: linear-gradient(to left top, #95b4bb, #b2c5cf, #ced7e0, #e8eaf0);
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
 }
 
 .bins {
@@ -120,32 +122,32 @@ body {
 .paper, .metal, .plastic, .glass {
     background-color: transparent;
     border-color: transparent;
-    padding-top: 1.8%;
+    padding-top: 0.35%;
 }
 
 .paper-bin, .metal-bin, .plastic-bin, .glass-bin {
     width: 80%;
     height: 80%;
-    transform: scale(0.8);
+    transform: scale(0.7);
 }
 
 .paper-bin:hover {
-    transform: scale(0.9);
+    transform: scale(0.75);
     transition: all 0.5s ease-in-out;
 }
 
 .metal-bin:hover {
-    transform: scale(0.9);
+    transform: scale(0.75);
     transition: all 0.5s ease-in-out;
 }
 
 .plastic-bin:hover {
-    transform: scale(0.9);
+    transform: scale(0.75);
     transition: all 0.5s ease-in-out;
 }
 
 .glass-bin:hover {
-    transform: scale(0.9);
+    transform: scale(0.75);
     transition: all 0.5s ease-in-out;
 }
 

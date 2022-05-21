@@ -70,20 +70,20 @@ body {
     position: absolute;
     top: -9.0%;
     left: 36%;
-    transform: scale(0.62);
+    transform: scale(0.63);
     padding-top: 5%;
 }
 
 .load-image-div .load-image {
     position: absolute;
-    top: 23%;
+    top: 25%;
     left: 44.3%;
     margin-top: 10%;
     font-size: 20px;
-    color: #525759;
     font-weight: bold;
     width: 10%;
     height: 12%;
+    border: 2px black solid;
     border-radius: 10px;
     background-image: linear-gradient(to right bottom, #95b4bb, #b2c5cf, #ced7e0, #e8eaf0);
     transform: scale(0.75);
@@ -93,7 +93,7 @@ body {
     cursor: pointer;
     background-image: linear-gradient(to left top, #95b4bb, #b2c5cf, #ced7e0, #e8eaf0);
     transform: scale(0.8);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .bins {
