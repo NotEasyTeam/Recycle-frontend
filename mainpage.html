@@ -16,9 +16,31 @@
     <link href="../style/mainpage.css" rel="stylesheet">
 
     <!-- js -->
-    <script defer src="../script/main.js"></script>
-    <script defer src="../script/signapi.js"></script>
-
+    <script src="../script/mainpage.js"></script>
+    <script src="../script/signapi.js"></script>
+    <script>
+        async function checkLogin() {
+            const info = await getUserInfo();
+            console.log(info)
+            const username = document.getElementById("username")
+            const name = document.getElementById("user-name")
+            const userpoint = document.getElementById("userpoint")
+            const point = document.getElementById("user-point")
+            const loginoutButton = document.getElementById("loginout")
+            if (info){
+                username.innerText = info[0]
+                userpoint.innerText = info[1]
+                loginoutButton.innerText = "로그아웃"
+                loginoutButton.setAttribute("onclick", "logout()")
+            }else{
+                name.innerText = ""
+                point.innerText = ""
+                loginoutButton.innerText = "로그인"
+                loginoutButton.setAttribute("onclick", "location.href='/login.html'")
+            }
+        }
+        checkLogin();
+    </script>
     <title>10cycle</title>
 </head>
 <body>
@@ -31,14 +53,14 @@
 
     <!-- 회원 정보 (로그아웃, 포인트) -->
     <div class="user-info">
-        <p class="logout" onclick="logout()">
+        <p class="logout" id="loginout" onclick="logout()">
             <i class="fa-solid fa-right-from-bracket" id="logout-icon"></i> 로그아웃
         </p>
-        <p class="point">
-            <i class="fa-solid fa-coins"></i> 30,300 포인트
+        <p class="point" id="user-point">
+            <i class="fa-solid fa-coins"></i>  <span id="userpoint"></span> 포인트
         </p>
-        <p class="username">
-            <i class="fa-solid fa-user"></i> ㅇㅇㅇ 님
+        <p class="username" id="user-name">
+            <i class="fa-solid fa-user"></i> <span id="username"></span>님
         </p>
     </div>
 </header>
@@ -49,7 +71,7 @@
     <div class="load-image-div">
         <img class="garbage" src="/static/image/Garbage.png"
              alt="Garbage">
-        <button class="load-image" onclick="handleSignup()">
+        <button class="load-image" onclick="checkLogin()">
             <i class="fa-solid fa-arrow-up-from-bracket"></i> 사진 가져오기
         </button>
     </div>

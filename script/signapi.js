@@ -121,6 +121,24 @@ async function handleLogin(){
 
 function logout(){
     localStorage.removeItem("token")
-    window.location.replace(`${frontend_base_url}/login.html`);
+    window.location.replace(`${frontend_base_url}/mainpage.html`);
 }
 
+
+// 유저 이름, 포인트 불러오는 함수
+async function getUserInfo(){
+    const response = await fetch(`${backend_base_url}/getuserinfo`, {
+        headers:{
+            'Authorization' : localStorage.getItem("token")
+        }
+    }
+    )
+    if (response.status == 200) {
+        response_json = await response.json()
+        console.log(response_json)
+        return [response_json.name, response_json.point]
+    }  
+    else{
+        return null
+    }
+}
