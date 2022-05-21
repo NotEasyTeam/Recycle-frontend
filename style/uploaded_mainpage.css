@@ -1,9 +1,10 @@
 body {
+    background-image: linear-gradient(to right bottom, #7df9e9, #7df6e0, #7ef3d6, #7fefcc, #82ecc2, #78edb7, #71edab, #6ced9d, #5cf187, #51f46c, #4cf64b, #4ef804);
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 980px;
+    height: 1100px;
     animation: showText 2s;
     overflow: hidden;
 }
@@ -12,21 +13,21 @@ body {
     background-color: white;
     display: inline-block;
     width: 100%;
-    height: 10%;
+    height: 7%;
 }
 
 .logo {
     width: 49%;
     display: inline-block;
     margin-left: 1%;
-    margin-top: 1.5%;
+    margin-top: 0.8%;
 }
 
 .user-info {
     width: 49%;
     display: inline-block;
     float: right;
-    margin-top: 2%;
+    margin-top: 1.2%;
 }
 
 .username, .point, .logout {
@@ -50,11 +51,10 @@ body {
 }
 
 .main-body {
-    background-color: rgb(210, 210, 210);
     display: inline-block;
     flex-direction: column;
     width: 100%;
-    height: 80%;
+    height: 980px;
     justify-content: center;
 }
 
@@ -96,21 +96,23 @@ body {
     font-size: 20px;
 }
 
-.load-image {
+.result .load-image {
     margin-top: 20%;
     font-size: 20px;
     font-weight: bold;
-    height: 10%;
+    width: 60%;
+    height: 30%;
     border-radius: 10px;
-    background-color: white;
-    transform: scale(1);
+    border: 2px black solid;
+    background-image: linear-gradient(to right bottom, #95b4bb, #b2c5cf, #ced7e0, #e8eaf0);
+    transform: scale(0.9);
 }
 
 .load-image:hover {
     cursor: pointer;
-    background-color: rgb(190,190,190);
-    transform: scale(1.1);
-    transition: all 0.2s ease-in-out;
+    background-image: linear-gradient(to left top, #95b4bb, #b2c5cf, #ced7e0, #e8eaf0);
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
 }
 
 .bins {
@@ -118,44 +120,42 @@ body {
 }
 
 .paper, .metal, .plastic, .glass {
-    margin-top: 1%;
     background-color: transparent;
     border-color: transparent;
+    padding-top: 0.35%;
 }
 
 .paper-bin, .metal-bin, .plastic-bin, .glass-bin {
     width: 80%;
     height: 80%;
-    transform: scale(1);
+    transform: scale(0.7);
 }
 
 .paper-bin:hover {
-    transform: scale(1.1);
+    transform: scale(0.75);
     transition: all 0.5s ease-in-out;
 }
 
 .metal-bin:hover {
-    transform: scale(1.1);
+    transform: scale(0.75);
     transition: all 0.5s ease-in-out;
 }
 
 .plastic-bin:hover {
-    transform: scale(1.1);
+    transform: scale(0.75);
     transition: all 0.5s ease-in-out;
 }
 
 .glass-bin:hover {
-    transform: scale(1.1);
+    transform: scale(0.75);
     transition: all 0.5s ease-in-out;
 }
 
 .footer {
     display: inline-block;
     width: 100%;
-    height: 10%;
-    margin-top: 15px;
     text-align: center;
-    color: rgb(130,130,130);
+    margin-top: 0.05%;
 }
 
 a:link {

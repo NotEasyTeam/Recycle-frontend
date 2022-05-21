@@ -41,7 +41,7 @@ async function handleLogin(){
     localStorage.setItem("token", response_json.token)
 
     if (response.status == 200){
-        window.location.replace(`${frontend_base_url}/index.html`);
+        window.location.replace(`${frontend_base_url}/mainpage.html`);
     }else {
         alert(response.status)
     }
