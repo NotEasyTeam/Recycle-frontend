@@ -34,7 +34,7 @@ body {
     padding: 20px ;
     text-align: center; 
     width: 350px; 
-    height: 500px; 
+    height: 550px; 
     margin-left: 100px; 
     background-color: white; 
     border-radius: 30px;
@@ -73,7 +73,7 @@ body {
 }
 
 .ask-sign {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .go-to-login {
@@ -85,8 +85,15 @@ body {
 }
 
 .signup-input-layer {
-    height: 260px;
+    height: 280px;
+    margin-top: 10px;
+}
 
+.help-info {
+    font-size: 11px;
+    color: #c74476;
+    text-align: left;
+    margin-left: 5px;
 }
 
 /* 모바일 Device : 0 ~ 400 */
