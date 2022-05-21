@@ -61,24 +61,22 @@ body {
 .load-image-div {
     display: inline-block;
     width: 100%;
-    height: 50%;
+    height: 49%;
     text-align: center;
     position: relative;
 }
 
 .load-image-div .garbage {
     position: absolute;
-    top: -9.0%;
+    top: -9%;
     left: 36%;
     transform: scale(0.63);
-    padding-top: 5%;
 }
 
 .load-image-div .load-image {
     position: absolute;
-    top: 25%;
+    top: 50%;
     left: 44.3%;
-    margin-top: 10%;
     font-size: 20px;
     font-weight: bold;
     width: 10%;
@@ -103,7 +101,6 @@ body {
 .paper, .metal, .plastic, .glass {
     background-color: transparent;
     border-color: transparent;
-    
 }
 
 .paper-bin, .metal-bin, .plastic-bin, .glass-bin {
@@ -166,7 +163,7 @@ div > div {
     border: solid 1px;
 }
 
-img {
+.griditem > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
