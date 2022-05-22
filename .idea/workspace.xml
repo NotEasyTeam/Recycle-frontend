@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="51fc8121-13ab-4cf2-9b77-345fb71c4c31" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/Upload_modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/Upload_modal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/uploaded_mainpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/uploaded_mainpage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploaded_mainpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/uploaded_mainpage.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Recycle-frontend" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="29V5Ekkv7FCjZykOv7gMKYUpu7K" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mrsexmaster/Recycle-frontend&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="51fc8121-13ab-4cf2-9b77-345fb71c4c31" name="변경" comment="" />
+      <created>1653185304018</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1653185304018</updated>
+      <workItem from="1653185320572" duration="746000" />
+      <workItem from="1653186825139" duration="4232000" />
+      <workItem from="1653192682067" duration="11936000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
