@@ -35,23 +35,26 @@
                         <input type="text" class="form-control input-user-data" id="username" onclick=""
                             style="height: 40px;" placeholder="name">
                         <label class="input-info" for="useremail">이름</label>
+                        <p class="help-info" id="help-uname"></p>
                     </div>
                     <div class="form-floating mb-3 field has-addons">
                         <input type="text" class="form-control input-user-data" id="userid" onclick=""
                             style="height: 40px;" placeholder="id..">
                         <label class="input-info" for="usernick">아이디</label>
+                        <p class="help-info" id="help-uid"></p>
                     </div>
                     <p class="help-id" id="help-id-exist"></p>
                     <div class="form-floating mb-3" style="border: none;">
                         <input type="password" class="form-control input-user-data" id="userpw" style="height: 40px;"
                             placeholder="password...">
                         <label class="input-info" for="username">비밀번호</label>
+                        <p class="help-info" id="help-upw"></p>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control input-user-data" id="check-userpw"
+                        <input type="password" class="form-control input-user-data" id="repass"
                             style="height: 40px;" placeholder="password...">
-                        <label class="input-info" for="check-userpw">비밀번호 재확인</label>
-                        <p class="help-pw" id="help-pw-same"></p>
+                        <label class="input-info" for="repass">비밀번호 재확인</label>
+                        <p class="help-info" id="help-pw-same"></p>
                     </div>
                 </div>
                 <button class="btn btn-primary" type="button" onclick="handleSignup()">
