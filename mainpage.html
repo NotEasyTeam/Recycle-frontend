@@ -14,15 +14,16 @@
 
     <!-- CSS -->
     <link href="../style/mainpage.css" rel="stylesheet">
+
     <link rel="stylesheet" href="./style/Upload_modal.css">
 
     <!-- js -->
     <script src="../script/mainpage.js"></script>
     <script src="../script/signapi.js"></script>
+
     <script>
         async function checkLogin() {
             const info = await getUserInfo();
-            console.log(info)
             const username = document.getElementById("username")
             const name = document.getElementById("user-name")
             const userpoint = document.getElementById("userpoint")
@@ -73,10 +74,7 @@
         <img class="garbage" src="/static/image/Garbage.png"
              alt="Garbage">
 
-        <button class="load-image" onclick="handleSignup()"data-toggle="modal" data-target="#upload_image_modal">
-
-        <button class="load-image" onclick="checkLogin()">
-
+        <button class="load-image" data-toggle="modal" data-target="#upload_image_modal">
             <i class="fa-solid fa-arrow-up-from-bracket"></i> 사진 가져오기
         </button>
 
