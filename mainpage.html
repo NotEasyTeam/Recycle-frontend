@@ -17,30 +17,9 @@
     <link rel="stylesheet" href="./style/Upload_modal.css">
 
     <!-- js -->
-    <script src="../script/mainpage.js"></script>
     <script src="../script/signapi.js"></script>
-    <script>
-        async function checkLogin() {
-            const info = await getUserInfo();
-            const username = document.getElementById("username")
-            const name = document.getElementById("user-name")
-            const userpoint = document.getElementById("userpoint")
-            const point = document.getElementById("user-point")
-            const loginoutButton = document.getElementById("loginout")
-            if (info){
-                username.innerText = info[0]
-                userpoint.innerText = info[1]
-                loginoutButton.innerText = "로그아웃"
-                loginoutButton.setAttribute("onclick", "logout()")
-            }else{
-                name.innerText = ""
-                point.innerText = ""
-                loginoutButton.innerText = "로그인"
-                loginoutButton.setAttribute("onclick", "location.href='/login.html'")
-            }
-        }
-        checkLogin();
-    </script>
+    <script src="../script/mainpage.js"></script>
+    
     <title>10cycle</title>
 </head>
 <body>
@@ -53,8 +32,9 @@
 
     <!-- 회원 정보 (로그아웃, 포인트) -->
     <div class="user-info">
-        <p class="logout" id="loginout" onclick="logout()">
-            <i class="fa-solid fa-right-from-bracket" id="logout-icon"></i> 로그아웃
+        
+        <p class="logout" id="" onclick="">
+            <i class="fa-solid fa-right-from-bracket" id="logout-icon"></i> <span id="loginout" onclick="logout()">로그아웃</span>
         </p>
         <p class="point" id="user-point">
             <i class="fa-solid fa-coins"></i>  <span id="userpoint"></span> 포인트

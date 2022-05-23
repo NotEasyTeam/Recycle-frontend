@@ -13,7 +13,7 @@ function getuserpaper() {
                 $('#papergrid').append(temp_html)
             }
         }
-    }
+    })
 }
 
 function getusermetal() {
@@ -31,7 +31,7 @@ function getusermetal() {
                 $('#metalgrid').append(temp_html)
             }
         }
-    }
+    })
 }
 
 function getuserplastic() {
@@ -49,7 +49,7 @@ function getuserplastic() {
                 $('#plasticgrid').append(temp_html)
             }
         }
-    }
+    })
 }
 
 function getuserglass() {
@@ -67,6 +67,6 @@ function getuserglass() {
                 $('#glassgrid').append(temp_html)
             }
         }
-    }
+    })
 }
 
