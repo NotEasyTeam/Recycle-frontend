@@ -18,7 +18,31 @@
     <!-- js -->
     <script defer src="../script/main.js"></script>
     <script defer src="../script/signapi.js"></script>
+    <script defer src="../script/Upload_modal.js"></script>
 
+    <script>
+        async function checkLogin() {
+            const info = await getUserInfo();
+            console.log(info)
+            const username = document.getElementById("username")
+            const name = document.getElementById("user-name")
+            const userpoint = document.getElementById("userpoint")
+            const point = document.getElementById("user-point")
+            const loginoutButton = document.getElementById("loginout")
+            if (info){
+                username.innerText = info[0]
+                userpoint.innerText = info[1]
+                loginoutButton.innerText = "로그아웃"
+                loginoutButton.setAttribute("onclick", "logout()")
+            }else{
+                name.innerText = ""
+                point.innerText = ""
+                loginoutButton.innerText = "로그인"
+                loginoutButton.setAttribute("onclick", "location.href='/login.html'")
+            }
+        }
+        checkLogin();
+    </script>
     <title>10cycle</title>
 </head>
 <body>
@@ -31,14 +55,14 @@
 
     <!-- 회원 정보 (로그아웃, 포인트) -->
     <div class="user-info">
-        <p class="logout" onclick="logout()">
+        <p class="logout" id="loginout" onclick="logout()">
             <i class="fa-solid fa-right-from-bracket" id="logout-icon"></i> 로그아웃
         </p>
-        <p class="point">
-            <i class="fa-solid fa-coins"></i> 30,300 포인트
+        <p class="point" id="user-point">
+            <i class="fa-solid fa-coins"></i>  <span id="userpoint"></span> 포인트
         </p>
-        <p class="username">
-            <i class="fa-solid fa-user"></i> ㅇㅇㅇ 님
+        <p class="username" id="user-name">
+            <i class="fa-solid fa-user"></i> <span id="username"></span>님
         </p>
     </div>
 </header>
@@ -93,22 +117,22 @@
 
     </div>
     <!-- 푸터 -->
-<footer class="footer">
-    <p>
-        <a href="https://github.com/NotEasyTeam" target="_blank">소개</a> ·
-        <a href="">도움말</a> ·
-        <a href="">홍보 센터</a> ·
-        <a href="">API</a> ·
-        <a href="">채용 정보</a>
-        <a href="">개인정보처리방침</a> ·
-        <a href="">약관</a> ·
-        <a href="">위치</a> ·
-        <a href="">인기 계정</a> ·
-        <a href="">해시태그</a> ·
-        <a href="">언어</a>
-    </p>
-    <p>© 2022 10Cycle FROM NOT EASY TEAM</p>
-</footer>
+    <footer class="footer">
+        <p>
+            <a href="https://github.com/NotEasyTeam" target="_blank">소개</a> ·
+            <a href="">도움말</a> ·
+            <a href="">홍보 센터</a> ·
+            <a href="">API</a> ·
+            <a href="">채용 정보</a>
+            <a href="">개인정보처리방침</a> ·
+            <a href="">약관</a> ·
+            <a href="">위치</a> ·
+            <a href="">인기 계정</a> ·
+            <a href="">해시태그</a> ·
+            <a href="">언어</a>
+        </p>
+        <p>© 2022 10Cycle FROM NOT EASY TEAM</p>
+    </footer>
     <!-- Bin Modals -->
     <!-- Paper Bin Modal -->
     <div class="modal fade" id="paperbinmodal" tabindex="-1" role="dialog"
@@ -123,24 +147,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="grid" id="papergrid">
-                        <div class="griditem"><img
-                                src="https://www.thoughtco.com/thmb/s2S2nln9DtvfhF0Fqu4BCV93gqY=/2912x2912/smart/filters:no_upscale()/gray-paper-ball-184958447-582baf57ef3b4f1d9f1e8b04a57c87e2.jpg "
-                                alt="Girl in a jacket" width="auto" height="auto">
-                        </div>
-                        <div class="griditem"><img
-                                src="https://www.thoughtco.com/thmb/s2S2nln9DtvfhF0Fqu4BCV93gqY=/2912x2912/smart/filters:no_upscale()/gray-paper-ball-184958447-582baf57ef3b4f1d9f1e8b04a57c87e2.jpg "
-                                alt="Girl in a jacket" width="auto" height="auto">
-                        </div>
-                        <div class="griditem">item</div>
-                        <div class="griditem">item</div>
-                        <div class="griditem">item</div>
-                        <div class="griditem">item</div>
-                        <div class="griditem"><img
-                                src="https://www.sketchappsources.com/resources/source-image/paperplane_dribbble.png"
-                                alt="Girl in a jacket" width="auto" height="auto">
-                        </div>
-                        <div class="griditem">item</div>
-                        <div class="griditem">item</div>
+                    
                     </div>
                 </div>
 
@@ -163,24 +170,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="grid" id="metalgrid">
-                        <div class="griditem"><img
-                                src="https://www.thoughtco.com/thmb/s2S2nln9DtvfhF0Fqu4BCV93gqY=/2912x2912/smart/filters:no_upscale()/gray-paper-ball-184958447-582baf57ef3b4f1d9f1e8b04a57c87e2.jpg "
-                                alt="Girl in a jacket" width="auto" height="auto">
-                        </div>
-                        <div class="griditem"><img
-                                src="https://www.thoughtco.com/thmb/s2S2nln9DtvfhF0Fqu4BCV93gqY=/2912x2912/smart/filters:no_upscale()/gray-paper-ball-184958447-582baf57ef3b4f1d9f1e8b04a57c87e2.jpg "
-                                alt="Girl in a jacket" width="auto" height="auto">
-                        </div>
-                        <div class="griditem">item</div>
-                        <div class="griditem">item</div>
-                        <div class="griditem">item</div>
-                        <div class="griditem">item</div>
-                        <div class="griditem"><img
-                                src="https://www.sketchappsources.com/resources/source-image/paperplane_dribbble.png"
-                                alt="Girl in a jacket" width="auto" height="auto">
-                        </div>
-                        <div class="griditem">item</div>
-                        <div class="griditem">item</div>
+                        
                     </div>
                 </div>
 
@@ -203,24 +193,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="grid" id="plasticgrid">
-                        <div class="griditem"><img
-                                src="https://www.thoughtco.com/thmb/s2S2nln9DtvfhF0Fqu4BCV93gqY=/2912x2912/smart/filters:no_upscale()/gray-paper-ball-184958447-582baf57ef3b4f1d9f1e8b04a57c87e2.jpg "
-                                alt="Girl in a jacket" width="auto" height="auto">
-                        </div>
-                        <div class="griditem"><img
-                                src="https://www.thoughtco.com/thmb/s2S2nln9DtvfhF0Fqu4BCV93gqY=/2912x2912/smart/filters:no_upscale()/gray-paper-ball-184958447-582baf57ef3b4f1d9f1e8b04a57c87e2.jpg "
-                                alt="Girl in a jacket" width="auto" height="auto">
-                        </div>
-                        <div class="griditem">item</div>
-                        <div class="griditem">item</div>
-                        <div class="griditem">item</div>
-                        <div class="griditem">item</div>
-                        <div class="griditem"><img
-                                src="https://www.sketchappsources.com/resources/source-image/paperplane_dribbble.png"
-                                alt="Girl in a jacket" width="auto" height="auto">
-                        </div>
-                        <div class="griditem">item</div>
-                        <div class="griditem">item</div>
+                       
                     </div>
                 </div>
 
@@ -243,24 +216,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="grid" id="glassgrid">
-                        <div class="griditem"><img
-                                src="https://www.thoughtco.com/thmb/s2S2nln9DtvfhF0Fqu4BCV93gqY=/2912x2912/smart/filters:no_upscale()/gray-paper-ball-184958447-582baf57ef3b4f1d9f1e8b04a57c87e2.jpg "
-                                alt="Girl in a jacket" width="auto" height="auto">
-                        </div>
-                        <div class="griditem"><img
-                                src="https://www.thoughtco.com/thmb/s2S2nln9DtvfhF0Fqu4BCV93gqY=/2912x2912/smart/filters:no_upscale()/gray-paper-ball-184958447-582baf57ef3b4f1d9f1e8b04a57c87e2.jpg "
-                                alt="Girl in a jacket" width="auto" height="auto">
-                        </div>
-                        <div class="griditem">item</div>
-                        <div class="griditem">item</div>
-                        <div class="griditem">item</div>
-                        <div class="griditem">item</div>
-                        <div class="griditem"><img
-                                src="https://www.sketchappsources.com/resources/source-image/paperplane_dribbble.png"
-                                alt="Girl in a jacket" width="auto" height="auto">
-                        </div>
-                        <div class="griditem">item</div>
-                        <div class="griditem">item</div>
+                       
                     </div>
                 </div>
 

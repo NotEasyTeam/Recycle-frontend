@@ -1,31 +1,33 @@
 const backend_base_url = "http://127.0.0.1:5000"
-const frontend_base_url = "http://127.0.0.1:5500"
+// const frontend_base_url = "http://127.0.0.1:5555"
+const frontend_base_url = "http://localhost:5500"
+
 
 //이름 형식 한글만 입력함수
-function check_name(asValue){
+function check_name(asValue) {
     const regname = /^(?=.*[가-힣])[가-힣]{2,}$/;
     return regname.test(asValue);
 }
 
 //아이디 형식 함수
-function check_id(asValue){
+function check_id(asValue) {
     const regid = /^(?=.*[a-zA-Z])[-a-zA-Z0-9_.]{2,10}$/;
     return regid.test(asValue);
 }
 
 // 회원가입 함수
-async function handleSignup(){
+async function handleSignup() {
 
     const signupData = {
-        username : document.getElementById("username").value,
-        userid : document.getElementById("userid").value,
-        password : document.getElementById("userpw").value
+        username: document.getElementById("username").value,
+        userid: document.getElementById("userid").value,
+        password: document.getElementById("userpw").value
     }
     const repass = document.getElementById("repass").value
     const uid = signupData['userid']
     const uname = signupData['username']
     const upassword = signupData['password']
-    
+
     //정규표현식 비밀번호 8자리 대소문자, 특수문자포함
     const regExp = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
 
@@ -56,7 +58,7 @@ async function handleSignup(){
         alert('비밀번호를 입력해주세요.')
         $('#userpw').focus()
         return;
-    } 
+    }
     if (!upassword.match(regExp)) {
         alert('비밀번호는 최소8자리 대소문자,특수문자 포함 입력해주세요.')
         $('#help-upw').text('비밀번호는 최소8자리 대소문자,특수문자 포함')
@@ -69,77 +71,160 @@ async function handleSignup(){
         $('#help-pw-same').text('비밀번호를 다시 확인해주세요')
         $('#repass').focus()
         $('#repass').val('')
-        
-        
+
+
         return;
     }
-        
 
-    const response = await fetch(`${backend_base_url}/signup`,{
-        method:'POST',
-        body:JSON.stringify(signupData)
+
+    const response = await fetch(`${backend_base_url}/signup`, {
+        method: 'POST',
+        body: JSON.stringify(signupData)
     }
     )
     response_json = await response.json()
-    
-    
-    
-    if (response_json["result"] == "success"){
+
+
+
+    if (response_json["result"] == "success") {
         window.alert(response_json["msg"])
         window.location.replace(`${frontend_base_url}/login.html`);
-    }else {
+    } else {
         window.alert(response_json["msg"])
         $('#userid').focus()
         $('#userid').val('')
         return;
     }
 }
+// Kakao.init('ff16324da325a78de3968519e1701949'); //발급받은 키 중 javascript키를 사용해준다.
+
+//카카오 로그인 함수
+// window.Kakao.init('ff16324da325a78de3968519e1701949');
+// // console.log(Kakao.isInitialized()); // sdk초기화여부판단
+
+// function kakaoLogin() {
+//     window.Kakao.Auth.login({
+//         scope: 'profile_nickname', //동의항목 페이지에 있는 개인정보 보호 테이블의 활성화된 ID값을 넣습니다.
+//         success: function (response) {
+//             localStorage.setItem('token',response['access_token']) // 로그인 성공시 발급받은 토큰
+            
+//             window.Kakao.API.request({ // 사용자 정보 가져오기 
+//                 url: '/v2/user/me',
+//                 success: (res) => {
+//                     // console.log(res['id'])
+//                     const kakao_account = res.kakao_account;
+//                     // console.log(kakao_account.profile["nickname"])
+//                     const kakaoUserData = {
+//                         "userid": res['id'],
+//                         "username": kakao_account.profile["nickname"],
+//                     }
+//                     // console.log(kakaoUserData)
+//                     const response = fetch(`${backend_base_url}/kakaologin`, {
+//                         method: 'POST',
+//                         body: JSON.stringify(kakaoUserData)
+//                     }
+//                     )
+//                     console.log(response)
+//                     window.location.replace(`${frontend_base_url}/mainpage.html`);
+                    
+//                 }
+//             });
+//         },
+//         fail: function (error) {
+//             console.log(error);
+//         }
+        
+//     });
+// }
+
+// function AddUser() {
+//     $.ajax({
+//         type: "POST",
+//         url: "/kakaologin",
+//         data: {
+//             "userid": res['id'],
+//             "username": kakao_account.profile["nickname"],
+//         },
+//         success: function (response) {
+//             if (response['result'] == 'success') {
+//                 alert('로그인 성공!')
+//                 window.location.replace(`${frontend_base_url}/mainpage.html`);
+//             }
+//         }
+//     })
+// }
 
 
 //로그인 함수
-async function handleLogin(){
+async function handleLogin() {
     const loginData = {
-        userid : document.getElementById("userid").value,
-        password : document.getElementById("userpw").value
+        userid: document.getElementById("userid").value,
+        password: document.getElementById("userpw").value
     }
-    
-    const response = await fetch(`${backend_base_url}/login`,{
-        method:'POST',
-        body:JSON.stringify(loginData)
+
+    const response = await fetch(`${backend_base_url}/login`, {
+        method: 'POST',
+        body: JSON.stringify(loginData)
     }
     )
     response_json = await response.json()
-    
+
     localStorage.setItem("token", response_json.token)
 
-    if (response_json["result"] == "success"){
+    if (response_json["result"] == "success") {
         window.location.replace(`${frontend_base_url}/mainpage.html`);
-    }else {
+    } else {
         alert(response_json["msg"])
         $('#userid').focus()
         return;
     }
 }
 
-function logout(){
+//카카오로그아웃  
+function kakaoout() {
+    if (Kakao.Auth.getAccessToken()) {
+        Kakao.API.request({
+            url: '/v1/user/unlink',
+            success: function (response) {
+                console.log(response)
+            },
+            fail: function (error) {
+                console.log(error)
+            },
+        })
+        Kakao.Auth.setAccessToken(undefined)
+    }
+}
+function kakaoLogout() {
+    if (!Kakao.Auth.getAccessToken()) {
+      alert('Not logged in.')
+      return
+    }
+    Kakao.Auth.logout(function() {
+      alert('logout ok\naccess token -> ' + Kakao.Auth.getAccessToken())
+    })
+  }
+
+
+function logout() {
     localStorage.removeItem("token")
     window.location.replace(`${frontend_base_url}/mainpage.html`);
 }
 
 
 // 유저 이름, 포인트 불러오는 함수
-async function getUserInfo(){
+async function getUserInfo() {
     const response = await fetch(`${backend_base_url}/getuserinfo`, {
-        headers:{
-            'Authorization' : localStorage.getItem("token")
+        headers: {
+            'Authorization': localStorage.getItem("token")
         }
     }
     )
     if (response.status == 200) {
         response_json = await response.json()
         return [response_json.name, response_json.point]
-    }  
-    else{
+    }
+    else {
         return null
     }
 }
