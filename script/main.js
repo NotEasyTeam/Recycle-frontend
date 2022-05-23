@@ -37,7 +37,7 @@ function getusermetal() {
 function getuserplastic() {
     $.ajax({
         type: 'GET',
-        url: '/getusermetal',
+        url: '/getuserplastic',
         data: {},
         success: function (response) {
             let rows = response['user_plastic']
@@ -69,3 +69,4 @@ function getuserglass() {
         }
     }
 }
+

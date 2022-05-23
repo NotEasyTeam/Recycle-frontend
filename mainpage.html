@@ -14,6 +14,7 @@
 
     <!-- CSS -->
     <link href="../style/mainpage.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style/Upload_modal.css">
 
     <!-- js -->
     <script src="../script/mainpage.js"></script>
@@ -71,7 +72,11 @@
     <div class="load-image-div">
         <img class="garbage" src="/static/image/Garbage.png"
              alt="Garbage">
+
+        <button class="load-image" onclick="handleSignup()"data-toggle="modal" data-target="#upload_image_modal">
+
         <button class="load-image" onclick="checkLogin()">
+
             <i class="fa-solid fa-arrow-up-from-bracket"></i> 사진 가져오기
         </button>
 
@@ -80,22 +85,22 @@
     <!-- 쓰레기통 4개 버튼 부분 -->
     <div class="bins">
         <!-- Paper 쓰레기통 버튼 -->
-        <button class="paper" data-toggle="modal" data-target="#paperbinmodal" onclick="getuserpaper">
+        <button class="paper" data-toggle="modal" data-target="#paperbinmodal" onclick="getuserpaper()">
             <img class="paper-bin" src="/static/image/Bin_Paper.png"
                  alt="Paper">
         </button>
         <!-- Metal 쓰레기통 버튼 -->
-        <button class="metal" data-toggle="modal" data-target="#metalbinmodal" onclick="getusermetal">
+        <button class="metal" data-toggle="modal" data-target="#metalbinmodal" onclick="getusermetal()">
             <img class="metal-bin" src="/static/image/Bin_Metal.png"
                  alt="Paper">
         </button>
         <!-- Plastic 쓰레기통 버튼 -->
-        <button class="plastic" data-toggle="modal" data-target="#plasticbinmodal" onclick="getuserplastic">
+        <button class="plastic" data-toggle="modal" data-target="#plasticbinmodal" onclick="getuserplastic()">
             <img class="plastic-bin" src="/static/image/Bin_Plastic.png"
                  alt="Paper">
         </button>
         <!-- Glass 쓰레기통 버튼 -->
-        <button class="glass" data-toggle="modal" data-target="#glassbinmodal" onclick="getuserglass">
+        <button class="glass" data-toggle="modal" data-target="#glassbinmodal" onclick="getuserglass()">
             <img class="glass-bin" src="/static/image/Bin_Glass.png"
                  alt="Paper">
         </button>
@@ -139,8 +144,6 @@
                                 src="https://www.thoughtco.com/thmb/s2S2nln9DtvfhF0Fqu4BCV93gqY=/2912x2912/smart/filters:no_upscale()/gray-paper-ball-184958447-582baf57ef3b4f1d9f1e8b04a57c87e2.jpg "
                                 alt="Girl in a jacket" width="auto" height="auto">
                         </div>
-                        <div class="griditem">item</div>
-                        <div class="griditem">item</div>
                         <div class="griditem">item</div>
                         <div class="griditem">item</div>
                         <div class="griditem"><img
@@ -267,6 +270,38 @@
             </div>
         </div>
     </div>
+    <!-- upload_image_modal-->
+    <div class="modal fade" id="upload_image_modal" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+         <div id="root">
+    <div  class="modal_overlay" style="background: gray">
+        <div class="modal_window">
+        <h2 class="title">분리수거를 해볼까?</h2>
+        <hr>
+        <div class="contents">
+            <div class="upload-box">
+                <div id="drop-file" class="drag-file">
+                    <img src="https://img.icons8.com/pastel-glyph/2x/image-file.png" alt="파일 아이콘" class="image">
+                    <p class="message">Drag files to upload</p>
+                    <img src="" alt="미리보기 이미지" class="preview">
+                </div>
+                <label class="file-label" for="chooseFile">재활용 하기</label>
+                <input class="file" id="chooseFile" type="file" onchange="dropFile.handleFiles(this.files)"
+                       accept="image/png, image/jpeg, image/gif">
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 
 
@@ -281,6 +316,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+<script src="script/Upload_modal.js"></script>
+
 
 </body>
 </html>
