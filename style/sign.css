@@ -73,7 +73,7 @@ body {
 }
 
 .ask-sign {
-    margin-top: 30px;
+    margin-top: 14px;
 }
 
 .go-to-login {
@@ -96,6 +96,13 @@ body {
     margin-left: 5px;
 }
 
+.kakao-login {
+    margin-top: 10px;
+}
+
+.K-login-btn {
+    color: yellowgreen;
+}
 /* 모바일 Device : 0 ~ 400 */
 @media screen and (max-width: 10px) {
 
