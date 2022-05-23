@@ -4,7 +4,9 @@ function getuserpaper() {
         url: '/getuserpaper',
         data: {},
         success: function (response) {
+           
             let rows = response['user_paper']
+            print(rows)
             for (let i = 0; i < rows.length; i++) {
                 let image = rows[i]['image']
                 let temp_html = `<div class="griditem" > 
@@ -13,7 +15,7 @@ function getuserpaper() {
                 $('#papergrid').append(temp_html)
             }
         }
-    }
+    })
 }
 
 function getusermetal() {
@@ -31,7 +33,7 @@ function getusermetal() {
                 $('#metalgrid').append(temp_html)
             }
         }
-    }
+    })
 }
 
 function getuserplastic() {
@@ -49,7 +51,7 @@ function getuserplastic() {
                 $('#plasticgrid').append(temp_html)
             }
         }
-    }
+    })
 }
 
 function getuserglass() {
@@ -67,6 +69,6 @@ function getuserglass() {
                 $('#glassgrid').append(temp_html)
             }
         }
-    }
+    })
 }
 
