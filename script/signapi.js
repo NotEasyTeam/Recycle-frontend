@@ -112,10 +112,12 @@ async function handleLogin(){
     
     localStorage.setItem("token", response_json.token)
 
-    if (response.status == 200){
+    if (response_json["result"] == "success"){
         window.location.replace(`${frontend_base_url}/mainpage.html`);
     }else {
-        alert(response.status)
+        alert(response_json["msg"])
+        $('#userid').focus()
+        return;
     }
 }
 
@@ -135,7 +137,6 @@ async function getUserInfo(){
     )
     if (response.status == 200) {
         response_json = await response.json()
-        console.log(response_json)
         return [response_json.name, response_json.point]
     }  
     else{
