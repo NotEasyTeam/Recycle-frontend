@@ -17,13 +17,30 @@ function uploadRecycle() {
         cache: false,
         contentType: false,
         processData: false,
-        headers: {'Authorization': localStorage.getItem("token")},
+        headers: { 'Authorization': localStorage.getItem("token") },
         success: function (response) {
             alert(response['msg'])
-            window.location.reload()
+            window.location.replace(`${frontend_base_url}/uploaded_mainpage.html`);
         }
     })
 }
+
+function getUserRecycle() {
+    $.ajax({
+        type: 'GET',
+        url: `${backend_base_url}/main`,
+        data: {},
+        headers: { 'Authorization': localStorage.getItem("token") }, // 401에러 떴을때, 헤더에 토큰 뭐시기저시기
+        success: function (response) {
+            let image = response['img']
+            console.log(image)
+
+            let temp_html = `<img class="uploaded-img" src="{{ url_for('R-backend', filename='static/image/${image}') }}">` //경로문제 해결해야 모든 사진이 불러와진다 
+            $('#uploaded-image-box').append(temp_html)
+        }
+    })
+};
+
 
 
 
@@ -31,10 +48,10 @@ function uploadRecycle() {
 function getuserpaper() {
     $.ajax({
         type: 'GET',
-        url: '/getuserpaper',
+        url: `${backend_base_url}/getuserpaper`,
         data: {},
         success: function (response) {
-           
+
             let rows = response['user_paper']
             print(rows)
             for (let i = 0; i < rows.length; i++) {
@@ -51,7 +68,7 @@ function getuserpaper() {
 function getusermetal() {
     $.ajax({
         type: 'GET',
-        url: '/getusermetal',
+        url: `${backend_base_url}/getusermetal`,
         data: {},
         success: function (response) {
             let rows = response['user_metal']
@@ -69,7 +86,7 @@ function getusermetal() {
 function getuserplastic() {
     $.ajax({
         type: 'GET',
-        url: '/getuserplastic',
+        url: `${backend_base_url}/getuserplastic`,
         data: {},
         success: function (response) {
             let rows = response['user_plastic']
@@ -87,7 +104,7 @@ function getuserplastic() {
 function getuserglass() {
     $.ajax({
         type: 'GET',
-        url: '/getuserglass',
+        url: `${backend_base_url}/getuserglass`,
         data: {},
         success: function (response) {
             let rows = response['user_glass']
