@@ -97,43 +97,43 @@ async function handleSignup() {
 // Kakao.init('ff16324da325a78de3968519e1701949'); //발급받은 키 중 javascript키를 사용해준다.
 
 //카카오 로그인 함수
-window.Kakao.init('ff16324da325a78de3968519e1701949');
-// console.log(Kakao.isInitialized()); // sdk초기화여부판단
+// window.Kakao.init('ff16324da325a78de3968519e1701949');
+// // console.log(Kakao.isInitialized()); // sdk초기화여부판단
 
-function kakaoLogin() {
-    window.Kakao.Auth.login({
-        scope: 'profile_nickname', //동의항목 페이지에 있는 개인정보 보호 테이블의 활성화된 ID값을 넣습니다.
-        success: function (response) {
-            localStorage.setItem('token',response['access_token']) // 로그인 성공시 발급받은 토큰
+// function kakaoLogin() {
+//     window.Kakao.Auth.login({
+//         scope: 'profile_nickname', //동의항목 페이지에 있는 개인정보 보호 테이블의 활성화된 ID값을 넣습니다.
+//         success: function (response) {
+//             localStorage.setItem('token',response['access_token']) // 로그인 성공시 발급받은 토큰
             
-            window.Kakao.API.request({ // 사용자 정보 가져오기 
-                url: '/v2/user/me',
-                success: (res) => {
-                    // console.log(res['id'])
-                    const kakao_account = res.kakao_account;
-                    // console.log(kakao_account.profile["nickname"])
-                    const kakaoUserData = {
-                        "userid": res['id'],
-                        "username": kakao_account.profile["nickname"],
-                    }
-                    // console.log(kakaoUserData)
-                    const response = fetch(`${backend_base_url}/kakaologin`, {
-                        method: 'POST',
-                        body: JSON.stringify(kakaoUserData)
-                    }
-                    )
-                    console.log(response)
-                    window.location.replace(`${frontend_base_url}/mainpage.html`);
+//             window.Kakao.API.request({ // 사용자 정보 가져오기 
+//                 url: '/v2/user/me',
+//                 success: (res) => {
+//                     // console.log(res['id'])
+//                     const kakao_account = res.kakao_account;
+//                     // console.log(kakao_account.profile["nickname"])
+//                     const kakaoUserData = {
+//                         "userid": res['id'],
+//                         "username": kakao_account.profile["nickname"],
+//                     }
+//                     // console.log(kakaoUserData)
+//                     const response = fetch(`${backend_base_url}/kakaologin`, {
+//                         method: 'POST',
+//                         body: JSON.stringify(kakaoUserData)
+//                     }
+//                     )
+//                     console.log(response)
+//                     window.location.replace(`${frontend_base_url}/mainpage.html`);
                     
-                }
-            });
-        },
-        fail: function (error) {
-            console.log(error);
-        }
+//                 }
+//             });
+//         },
+//         fail: function (error) {
+//             console.log(error);
+//         }
         
-    });
-}
+//     });
+// }
 
 // function AddUser() {
 //     $.ajax({

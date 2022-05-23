@@ -1,3 +1,4 @@
+
 /* POST 요청 ajax 코드 */
 function uploadRecycle() {
     // 고유 id let 함수로 정의
@@ -11,11 +12,12 @@ function uploadRecycle() {
 
     $.ajax({
         type: "POST",
-        url: "/upload",
+        url: `${backend_base_url}/upload`,
         data: form_data,
         cache: false,
         contentType: false,
         processData: false,
+        headers: {'Authorization': localStorage.getItem("token")},
         success: function (response) {
             alert(response['msg'])
             window.location.reload()
