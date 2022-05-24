@@ -18,12 +18,15 @@
 
     <!-- CSS -->
     <link href="../style/uploaded_mainpage.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="../style/Upload_modal.css"> -->
 
     <!-- js -->
     <script src="../script/mainapi.js"></script>
     <script src="../script/signapi.js"></script>
     <script src="../script/mainpage.js"></script>
-
+    <script>
+        getUserRecycle();
+    </script>
     <title>10cycle</title>
 </head>
 
@@ -78,20 +81,20 @@
         <!-- 쓰레기통 4개 버튼 부분 -->
         <div class="bins">
             <!-- Paper 쓰레기통 버튼 -->
-            <button class="paper" data-toggle="modal" data-target="#paperbinmodal" onclick="getuserpaper">
-                <img class="paper-bin" src="/static/image/Bin_Paper.png" alt="Paper">   
+            <button class="paper" data-toggle="modal" data-target="#paperbinmodal" onclick="getuserpaper()">
+                <img class="paper-bin" src="/static/image/Bin_Paper.png" alt="">   
             </button>
             <!-- Metal 쓰레기통 버튼 -->
-            <button class="metal" data-toggle="modal" data-target="#metalbinmodal" onclick="getusermetal">
-                <img class="metal-bin" src="/static/image/Bin_Metal.png" alt="Paper">
+            <button class="metal" data-toggle="modal" data-target="#metalbinmodal" onclick="getusermetal()">
+                <img class="metal-bin" src="/static/image/Bin_Metal.png" alt="">
             </button>
             <!-- Plastic 쓰레기통 버튼 -->
-            <button class="plastic" data-toggle="modal" data-target="#plasticbinmodal" onclick="getuserplastic">
-                <img class="plastic-bin" src="/static/image/Bin_Plastic.png" alt="Paper">
+            <button class="plastic" data-toggle="modal" data-target="#plasticbinmodal" onclick="getuserplastic()">
+                <img class="plastic-bin" src="/static/image/Bin_Plastic.png" alt="">
             </button>
             <!-- Glass 쓰레기통 버튼 -->
-            <button class="glass" data-toggle="modal" data-target="#glassbinmodal" onclick="getuserglass">
-                <img class="glass-bin" src="/static/image/Bin_Glass.png" alt="Paper">
+            <button class="glass" data-toggle="modal" data-target="#glassbinmodal" onclick="getuserglass()">
+                <img class="glass-bin" src="/static/image/Bin_Glass.png" alt="">
             </button>
 
         </div>
@@ -142,7 +145,7 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Paper Items</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Metal Items</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -165,7 +168,7 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Paper Items</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Plastic Items</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -188,7 +191,7 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Paper Items</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Glass Items</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>

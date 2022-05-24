@@ -20,6 +20,7 @@ function uploadRecycle() {
         headers: { 'Authorization': localStorage.getItem("token") },
         success: function (response) {
             alert(response['msg'])
+            console.log(response['msg'])
             window.location.replace(`${frontend_base_url}/uploaded_mainpage.html`);
         }
     })
@@ -46,10 +47,12 @@ function getUserRecycle() {
 
 
 function getuserpaper() {
+    $('#papergrid').empty()
     $.ajax({
         type: 'GET',
         url: `${backend_base_url}/getuserpaper`,
         data: {},
+        headers: { 'Authorization': localStorage.getItem("token") },
         success: function (response) {
 
             let rows = response['user_paper']
@@ -57,7 +60,7 @@ function getuserpaper() {
             for (let i = 0; i < rows.length; i++) {
                 let image = rows[i]['image']
                 let temp_html = `<div class="griditem" > 
-                                    <img src = "${image}">                    
+                                    <img src = "./static/image/${image}">                    
                                  </div>`
                 $('#papergrid').append(temp_html)
             }
@@ -66,16 +69,18 @@ function getuserpaper() {
 }
 
 function getusermetal() {
+    $('#metalgrid').empty()
     $.ajax({
         type: 'GET',
         url: `${backend_base_url}/getusermetal`,
         data: {},
+        headers: { 'Authorization': localStorage.getItem("token") },
         success: function (response) {
             let rows = response['user_metal']
             for (let i = 0; i < rows.length; i++) {
                 let image = rows[i]['image']
                 let temp_html = `<div class="griditem" > 
-                                    <img src = "${image}">                    
+                                    <img src = "./static/image/${image}">                    
                                  </div>`
                 $('#metalgrid').append(temp_html)
             }
@@ -84,16 +89,18 @@ function getusermetal() {
 }
 
 function getuserplastic() {
+    $('#plasticgrid').empty()
     $.ajax({
         type: 'GET',
         url: `${backend_base_url}/getuserplastic`,
         data: {},
+        headers: { 'Authorization': localStorage.getItem("token") },
         success: function (response) {
             let rows = response['user_plastic']
             for (let i = 0; i < rows.length; i++) {
                 let image = rows[i]['image']
                 let temp_html = `<div class="griditem" > 
-                                    <img src = "${image}">                    
+                                    <img src = "./static/image/${image}">                    
                                  </div>`
                 $('#plasticgrid').append(temp_html)
             }
@@ -102,16 +109,18 @@ function getuserplastic() {
 }
 
 function getuserglass() {
+    $('#glassgrid').empty()
     $.ajax({
         type: 'GET',
         url: `${backend_base_url}/getuserglass`,
         data: {},
+        headers: { 'Authorization': localStorage.getItem("token") },
         success: function (response) {
             let rows = response['user_glass']
             for (let i = 0; i < rows.length; i++) {
                 let image = rows[i]['image']
                 let temp_html = `<div class="griditem" > 
-                                    <img src = "${image}">                    
+                                    <img src = "./static/image/${image}">                    
                                  </div>`
                 $('#glassgrid').append(temp_html)
             }

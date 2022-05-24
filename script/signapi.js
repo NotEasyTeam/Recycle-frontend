@@ -1,6 +1,6 @@
 const backend_base_url = "http://127.0.0.1:5000"
 // const frontend_base_url = "http://127.0.0.1:5555"
-const frontend_base_url = "http://localhost:5500"
+const frontend_base_url = "http://127.0.0.1:5500"
 
 
 //이름 형식 한글만 입력함수
