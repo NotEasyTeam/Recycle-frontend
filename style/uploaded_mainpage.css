@@ -263,6 +263,16 @@ div > div {
     display: none;
 }
 
+.recycle-btn {
+    margin-right: 80px;
+    background-color: grey;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    width: 150px;
+    height: 37px;
+}
+
 @media (max-width: 700px) {
     .contents {
         display: flex;
@@ -287,3 +297,4 @@ div > div {
         overflow: initial;
     }
 }
+
