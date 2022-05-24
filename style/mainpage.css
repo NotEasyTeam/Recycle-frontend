@@ -147,6 +147,11 @@ a:hover {
     color: rgb(0, 0, 0);
 }
 
+.modal-body{
+    width:478px;
+    height: 502px;
+}
+
 .grid {
     display: grid;
     gap: 5px;
