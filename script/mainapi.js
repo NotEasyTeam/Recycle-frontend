@@ -30,12 +30,12 @@ function getUserRecycle() {
         type: 'GET',
         url: `${backend_base_url}/main`,
         data: {},
-        headers: { 'Authorization': localStorage.getItem("token") }, // 401에러 떴을때, 헤더에 토큰 뭐시기저시기
+        headers: { 'Authorization': localStorage.getItem("token") }, // 401에러 떴을때, 헤더에 토큰 
         success: function (response) {
             let image = response['img']
             console.log(image)
 
-            let temp_html = `<img class="uploaded-img" src="{{ url_for('R-backend', filename='static/image/${image}') }}">` //경로문제 해결해야 모든 사진이 불러와진다 
+            let temp_html = `<img class="uploaded-img" src="./static/image/${image}">` //경로문제 해결해야 모든 사진이 불러와진다 
             $('#uploaded-image-box').append(temp_html)
         }
     })
