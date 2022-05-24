@@ -154,7 +154,6 @@ async function handleSignup() {
 //     })
 // }
 
-
 //로그인 함수
 async function handleLogin() {
     const loginData = {
@@ -180,30 +179,30 @@ async function handleLogin() {
     }
 }
 
-//카카오로그아웃  
-function kakaoout() {
-    if (Kakao.Auth.getAccessToken()) {
-        Kakao.API.request({
-            url: '/v1/user/unlink',
-            success: function (response) {
-                console.log(response)
-            },
-            fail: function (error) {
-                console.log(error)
-            },
-        })
-        Kakao.Auth.setAccessToken(undefined)
-    }
-}
-function kakaoLogout() {
-    if (!Kakao.Auth.getAccessToken()) {
-      alert('Not logged in.')
-      return
-    }
-    Kakao.Auth.logout(function() {
-      alert('logout ok\naccess token -> ' + Kakao.Auth.getAccessToken())
-    })
-  }
+// //카카오로그아웃  
+// function kakaoout() {
+//     if (Kakao.Auth.getAccessToken()) {
+//         Kakao.API.request({
+//             url: '/v1/user/unlink',
+//             success: function (response) {
+//                 console.log(response)
+//             },
+//             fail: function (error) {
+//                 console.log(error)
+//             },
+//         })
+//         Kakao.Auth.setAccessToken(undefined)
+//     }
+// }
+// function kakaoLogout() {
+//     if (!Kakao.Auth.getAccessToken()) {
+//       alert('Not logged in.')
+//       return
+//     }
+//     Kakao.Auth.logout(function() {
+//       alert('logout ok\naccess token -> ' + Kakao.Auth.getAccessToken())
+//     })
+//   }
 
 
 function logout() {
